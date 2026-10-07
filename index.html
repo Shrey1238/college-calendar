@@ -99,7 +99,13 @@ const fmtTime = d => d ? d.toLocaleTimeString([], {hour:'numeric', minute:'2-dig
 const fmtDate = d => d.toLocaleDateString([], {weekday:'short', month:'short', day:'numeric'});
 const dayKey = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 
-function evStart(e){ return e.start ? new Date(e.start) : null; }
+function evStart(e){
+  if (!e.start) return null;
+  // Date-only values ("2026-10-08") parse as UTC midnight — anchor to local
+  // noon so they land on the right day in every timezone.
+  if (/^\d{4}-\d{2}-\d{2}$/.test(e.start)) return new Date(e.start + 'T12:00:00');
+  return new Date(e.start);
+}
 function visible(e){ return (!e.course || !hidden.has(e.course)) && (showClasses || e.type !== 'class'); }
 function color(e){
   const c = e.course && DATA.courses[e.course];
