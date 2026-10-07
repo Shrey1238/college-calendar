@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      CANVAS_ICS_URL: ${{ secrets.CANVAS_ICS_URL }}
     steps:
       - uses: actions/checkout@v4
 
@@ -28,8 +30,6 @@ jobs:
         run: pip install icalendar pyyaml
 
       - name: Build events.json
-        env:
-          CANVAS_ICS_URL: ${{ secrets.CANVAS_ICS_URL }}
         run: python ingest.py
 
       - name: Commit refreshed data
@@ -38,6 +38,13 @@ jobs:
           git config user.email "calendar-bot@users.noreply.github.com"
           git add events.json
           git diff --cached --quiet || git commit -m "Refresh events $(date -u +%Y-%m-%d)"
+          # Remote may have moved during the run (manual pushes, other runs).
+          # If the rebase conflicts, regenerate events.json and continue.
+          git pull --rebase || {
+            python ingest.py
+            git add events.json
+            GIT_EDITOR=true git rebase --continue
+          }
           git push
 
       - uses: actions/upload-pages-artifact@v3
