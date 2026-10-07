@@ -61,14 +61,46 @@
   dialog { background: var(--panel); color: var(--text); border: 1px solid var(--line);
            border-radius: 12px; max-width: 420px; }
   dialog::backdrop { background: rgba(0,0,0,.6); }
+
+  /* productivity additions */
+  .controls { display: flex; gap: 8px; align-items: center; }
+  .searchbox { background: var(--panel2); color: var(--text); border: 1px solid var(--line);
+               border-radius: 8px; padding: 5px 10px; font-size: 13px; width: 170px; }
+  .btn { background: var(--panel2); color: var(--text); border: 1px solid var(--line);
+         border-radius: 8px; padding: 5px 12px; font-size: 13px; cursor: pointer; }
+  .btn:hover { background: var(--line); }
+  .nextup { margin: 0 24px 12px; padding: 12px 16px; border-radius: 10px; font-size: 14px;
+            background: linear-gradient(90deg, rgba(245,158,11,.15), rgba(245,158,11,.03));
+            border: 1px solid rgba(245,158,11,.35); display: flex; gap: 8px; flex-wrap: wrap;
+            align-items: baseline; }
+  .nextup .lbl { color: var(--accent); font-weight: 700; font-size: 12px;
+                 text-transform: uppercase; letter-spacing: .05em; }
+  .exams { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 24px 12px; }
+  .exams .chip { border-color: rgba(239,68,68,.4); }
+  .exams .chip b { color: #f87171; }
+  .item.done .title { text-decoration: line-through; color: var(--dim); }
+  .item.done { opacity: .45; }
+  .item .check { accent-color: var(--accent); margin-top: 3px; cursor: pointer; }
+  .ev.done { text-decoration: line-through; opacity: .4; }
+  .bars { display: flex; align-items: flex-end; gap: 3px; height: 44px; padding: 4px 2px 0; }
+  .bars .col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .bars .bar { width: 100%; border-radius: 3px 3px 0 0; background: var(--accent);
+               min-height: 2px; opacity: .8; }
+  .bars .lab { font-size: 9px; color: var(--dim); }
 </style>
 </head>
 <body>
 <header>
   <h1>College Calendar</h1>
-  <div class="meta" id="meta"></div>
+  <div class="controls">
+    <input class="searchbox" id="search" placeholder="Filter events..." oninput="query=this.value; render(); renderAgenda();">
+    <button class="btn" onclick="exportICS()">Export .ics</button>
+    <div class="meta" id="meta"></div>
+  </div>
 </header>
+<div class="nextup" id="nextup"></div>
 <div class="legend" id="legend"></div>
+<div class="exams" id="exams"></div>
 <div class="layout">
   <div class="card">
     <div class="cal-head">
@@ -84,6 +116,7 @@
   </div>
   <div class="card agenda">
     <h2>Next 14 days</h2>
+    <div class="bars" id="bars"></div>
     <div id="agenda"></div>
   </div>
 </div>
@@ -94,6 +127,15 @@ let DATA = { events: [], courses: {} };
 let view = new Date(); view.setDate(1);
 let hidden = new Set();
 let showClasses = false;
+let query = '';
+let doneSet = new Set(JSON.parse(localStorage.getItem('cc_done') || '[]'));
+const doneKey = e => e.title + '|' + e.start;
+function toggleDone(e){
+  const k = doneKey(e);
+  doneSet.has(k) ? doneSet.delete(k) : doneSet.add(k);
+  localStorage.setItem('cc_done', JSON.stringify([...doneSet]));
+  render(); renderAgenda(); renderNextUp(); renderBars();
+}
 
 const fmtTime = d => d ? d.toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : '';
 const fmtDate = d => d.toLocaleDateString([], {weekday:'short', month:'short', day:'numeric'});
@@ -106,7 +148,11 @@ function evStart(e){
   if (/^\d{4}-\d{2}-\d{2}$/.test(e.start)) return new Date(e.start + 'T12:00:00');
   return new Date(e.start);
 }
-function visible(e){ return (!e.course || !hidden.has(e.course)) && (showClasses || e.type !== 'class'); }
+function visible(e){
+  return (!e.course || !hidden.has(e.course))
+    && (showClasses || e.type !== 'class')
+    && (!query || e.title.toLowerCase().includes(query.toLowerCase()));
+}
 function color(e){
   const c = e.course && DATA.courses[e.course];
   return c ? c.color : '#8b93a5';
@@ -121,7 +167,60 @@ async function load(){
   DATA = await r.json();
   document.getElementById('meta').textContent =
     'Updated ' + new Date(DATA.generated_at).toLocaleString();
-  renderLegend(); render(); renderAgenda();
+  renderLegend(); render(); renderAgenda(); renderNextUp(); renderExams(); renderBars();
+}
+
+function renderNextUp(){
+  const el = document.getElementById('nextup');
+  const now = new Date();
+  const next = DATA.events
+    .filter(e => visible(e) && e.type !== 'class' && !doneSet.has(doneKey(e)) && evStart(e) && evStart(e) >= now)
+    .sort((a, b) => evStart(a) - evStart(b))[0];
+  if (!next){ el.style.display = 'none'; return; }
+  el.style.display = '';
+  const d = evStart(next);
+  const hrs = Math.max(0, Math.round((d - now) / 3600000));
+  const when = hrs < 48 ? `${hrs}h` : `${Math.round(hrs / 24)}d`;
+  el.innerHTML = `<span class="lbl">Next up</span> <b>${next.title}</b>
+    <span style="color:${color(next)}">&#9679;</span> ${fmtDate(d)} ${fmtTime(d)} &middot; <b>in ${when}</b>
+    <button class="btn" style="margin-left:auto;padding:2px 10px" onclick='toggleDone(${JSON.stringify(doneKey(next)).replace(/'/g, "&#39;")})'>Mark done</button>`;
+}
+
+function renderExams(){
+  const el = document.getElementById('exams'); el.innerHTML = '';
+  const now = new Date();
+  const exams = DATA.events
+    .filter(e => ['exam', 'final'].includes(e.type) && evStart(e) && evStart(e) >= now)
+    .sort((a, b) => evStart(a) - evStart(b));
+  for (const e of exams){
+    const d = evStart(e);
+    const n = Math.ceil((d - now) / 86400000);
+    const s = document.createElement('span'); s.className = 'chip';
+    s.innerHTML = `${e.title} &middot; <b>${n}d</b>`;
+    s.onclick = () => showEvent(e);
+    el.appendChild(s);
+  }
+}
+
+function renderBars(){
+  const el = document.getElementById('bars'); el.innerHTML = '';
+  const now = new Date(); now.setHours(0, 0, 0, 0);
+  const counts = Array(14).fill(0);
+  for (const e of DATA.events){
+    if (!visible(e) || e.type === 'class' || doneSet.has(doneKey(e))) continue;
+    const d = evStart(e); if (!d) continue;
+    const i = Math.floor((d - now) / 86400000);
+    if (i >= 0 && i < 14) counts[i]++;
+  }
+  const max = Math.max(...counts, 1);
+  counts.forEach((c, i) => {
+    const d = new Date(now); d.setDate(now.getDate() + i);
+    const col = document.createElement('div'); col.className = 'col';
+    col.title = `${fmtDate(d)}: ${c} item${c === 1 ? '' : 's'}`;
+    col.innerHTML = `<div class="bar" style="height:${Math.round(c / max * 30) + 2}px"></div>
+      <div class="lab">${d.toLocaleDateString([], {weekday: 'narrow'})}</div>`;
+    el.appendChild(col);
+  });
 }
 
 function renderLegend(){
@@ -161,7 +260,7 @@ function render(){
     cell.innerHTML = `<div class="num">${d.getDate()}</div>`;
     for (const e of (byDay[dayKey(d)] || [])){
       const s = document.createElement('span');
-      s.className = 'ev ' + e.type;
+      s.className = 'ev ' + e.type + (doneSet.has(doneKey(e)) ? ' done' : '');
       s.style.borderLeftColor = color(e);
       s.textContent = e.title;
       s.onclick = () => showEvent(e);
@@ -191,14 +290,17 @@ function renderAgenda(){
     grp.innerHTML = `<h3>${label}${n >= 0 && n <= 2 ? ' <span class="due-soon">(' + n + 'd)</span>' : ''}</h3>`;
     for (const e of groups[k]){
       const sd = evStart(e);
-      const item = document.createElement('div'); item.className = 'item';
-      item.innerHTML = `<div class="bar" style="background:${color(e)}"></div>
+      const item = document.createElement('div');
+      item.className = 'item' + (doneSet.has(doneKey(e)) ? ' done' : '');
+      item.innerHTML = `<input type="checkbox" class="check" ${doneSet.has(doneKey(e)) ? 'checked' : ''}>
+        <div class="bar" style="background:${color(e)}"></div>
         <div class="t">${fmtTime(sd) || 'All day'}</div>
         <div class="b"><div class="title">${e.title}</div>
         <div class="sub"><span class="badge">${e.type}</span>
         <span class="badge">${e.source}</span>
         ${e.course && DATA.courses[e.course] ? `<span class="badge">${DATA.courses[e.course].name}</span>` : ''}
         </div></div>`;
+      item.querySelector('.check').onclick = ev => { ev.stopPropagation(); toggleDone(e); };
       item.onclick = () => showEvent(e);
       item.style.cursor = 'pointer';
       grp.appendChild(item);
@@ -223,6 +325,34 @@ function showEvent(e){
 
 function shiftMonth(n){ view.setMonth(view.getMonth() + n); render(); }
 function goToday(){ view = new Date(); view.setDate(1); render(); }
+
+function exportICS(){
+  const esc = s => (s || '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+  const dt = d => {
+    const p = n => String(n).padStart(2, '0');
+    return `${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}T${p(d.getHours())}${p(d.getMinutes())}00`;
+  };
+  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//college-calendar//EN'];
+  for (const e of DATA.events){
+    const d = evStart(e); if (!d) continue;
+    const ed = e.end ? new Date(e.end) : d;
+    lines.push('BEGIN:VEVENT');
+    lines.push('UID:' + encodeURIComponent(e.title + e.start));
+    lines.push('DTSTART:' + dt(d));
+    lines.push('DTEND:' + dt(ed));
+    lines.push('SUMMARY:' + esc(e.title));
+    if (e.location) lines.push('LOCATION:' + esc(e.location));
+    if (e.url) lines.push('URL:' + e.url);
+    lines.push('END:VEVENT');
+  }
+  lines.push('END:VCALENDAR');
+  const blob = new Blob([lines.join('\r\n')], {type: 'text/calendar'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'college-calendar.ics';
+  a.click();
+}
+
 load();
 </script>
 </body>
