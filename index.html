@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>College Calendar</title>
+<style>
+  :root {
+    --bg: #0f1117; --panel: #181b23; --panel2: #1f2330; --line: #2a2f3e;
+    --text: #e7e9ee; --dim: #9aa0ae; --accent: #f59e0b;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+         background: var(--bg); color: var(--text); }
+  header { padding: 18px 24px 10px; display: flex; flex-wrap: wrap; gap: 12px;
+           align-items: baseline; justify-content: space-between; }
+  h1 { font-size: 20px; margin: 0; font-weight: 650; }
+  .meta { color: var(--dim); font-size: 12px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 24px 12px; }
+  .chip { font-size: 12px; padding: 3px 10px; border-radius: 999px;
+          background: var(--panel); border: 1px solid var(--line); cursor: pointer; }
+  .chip.active { border-color: var(--accent); }
+  .layout { display: grid; grid-template-columns: 1fr 340px; gap: 16px; padding: 0 24px 24px; }
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; }
+  .cal-head { display: flex; align-items: center; justify-content: space-between;
+              padding: 12px 16px; border-bottom: 1px solid var(--line); }
+  .cal-head h2 { font-size: 16px; margin: 0; font-weight: 600; }
+  .nav button { background: var(--panel2); color: var(--text); border: 1px solid var(--line);
+                border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 14px; }
+  .nav button:hover { background: var(--line); }
+  .dow { display: grid; grid-template-columns: repeat(7, 1fr); padding: 8px 8px 0;
+         color: var(--dim); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+  .dow div { text-align: center; }
+  .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; padding: 8px; }
+  .day { min-height: 86px; background: var(--panel2); border: 1px solid transparent;
+         border-radius: 8px; padding: 5px; font-size: 12px; overflow: hidden; }
+  .day.other { opacity: .35; }
+  .day.today { border-color: var(--accent); }
+  .day .num { font-weight: 600; color: var(--dim); margin-bottom: 3px; }
+  .ev { display: block; margin: 2px 0; padding: 2px 6px; border-radius: 5px; font-size: 11px;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer;
+        border-left: 3px solid var(--accent); background: rgba(255,255,255,.05); }
+  .ev.exam { border-left-color: #ef4444; }
+  .ev.final { border-left-color: #dc2626; font-weight: 600; }
+  .agenda { padding: 12px 16px; }
+  .agenda h2 { font-size: 16px; margin: 0 0 10px; font-weight: 600; }
+  .daygroup { margin-bottom: 14px; }
+  .daygroup h3 { font-size: 12px; color: var(--dim); margin: 0 0 6px;
+                 text-transform: uppercase; letter-spacing: .05em; }
+  .item { display: flex; gap: 10px; padding: 8px 10px; border-radius: 8px;
+          background: var(--panel2); margin-bottom: 6px; align-items: flex-start; }
+  .item .bar { width: 4px; border-radius: 2px; align-self: stretch; }
+  .item .t { font-size: 12px; color: var(--dim); width: 62px; flex-shrink: 0; padding-top: 1px; }
+  .item .b { flex: 1; }
+  .item .title { font-size: 13px; }
+  .item .sub { font-size: 11px; color: var(--dim); margin-top: 2px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .badge { padding: 1px 7px; border-radius: 999px; background: rgba(255,255,255,.07); font-size: 10px; }
+  .empty { color: var(--dim); font-size: 13px; padding: 20px; text-align: center; }
+  .due-soon { color: #f87171; font-weight: 600; }
+  dialog { background: var(--panel); color: var(--text); border: 1px solid var(--line);
+           border-radius: 12px; max-width: 420px; }
+  dialog::backdrop { background: rgba(0,0,0,.6); }
+</style>
+</head>
+<body>
+<header>
+  <h1>College Calendar</h1>
+  <div class="meta" id="meta"></div>
+</header>
+<div class="legend" id="legend"></div>
+<div class="layout">
+  <div class="card">
+    <div class="cal-head">
+      <h2 id="monthLabel"></h2>
+      <div class="nav">
+        <button onclick="shiftMonth(-1)">&#8249;</button>
+        <button onclick="goToday()">Today</button>
+        <button onclick="shiftMonth(1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="dow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
+    <div class="grid" id="grid"></div>
+  </div>
+  <div class="card agenda">
+    <h2>Next 14 days</h2>
+    <div id="agenda"></div>
+  </div>
+</div>
+<dialog id="dlg"><div id="dlgBody"></div></dialog>
+
+<script>
+let DATA = { events: [], courses: {} };
+let view = new Date(); view.setDate(1);
+let hidden = new Set();
+let showClasses = false;
+
+const fmtTime = d => d ? d.toLocaleTimeString([], {hour:'numeric', minute:'2-digit'}) : '';
+const fmtDate = d => d.toLocaleDateString([], {weekday:'short', month:'short', day:'numeric'});
+const dayKey = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+
+function evStart(e){ return e.start ? new Date(e.start) : null; }
+function visible(e){ return (!e.course || !hidden.has(e.course)) && (showClasses || e.type !== 'class'); }
+function color(e){
+  const c = e.course && DATA.courses[e.course];
+  return c ? c.color : '#8b93a5';
+}
+function daysUntil(d){
+  const now = new Date(); now.setHours(0,0,0,0);
+  return Math.round((d - now)/86400000);
+}
+
+async function load(){
+  const r = await fetch('events.json', {cache:'no-store'});
+  DATA = await r.json();
+  document.getElementById('meta').textContent =
+    'Updated ' + new Date(DATA.generated_at).toLocaleString();
+  renderLegend(); render(); renderAgenda();
+}
+
+function renderLegend(){
+  const el = document.getElementById('legend'); el.innerHTML = '';
+  for (const [key, c] of Object.entries(DATA.courses || {})){
+    const s = document.createElement('span');
+    s.className = 'chip' + (hidden.has(key) ? '' : ' active');
+    s.innerHTML = `<span style="color:${c.color}">&#9679;</span> ${c.name}`;
+    s.onclick = () => { hidden.has(key) ? hidden.delete(key) : hidden.add(key); renderLegend(); render(); renderAgenda(); };
+    el.appendChild(s);
+  }
+  const t = document.createElement('span');
+  t.className = 'chip' + (showClasses ? ' active' : '');
+  t.textContent = 'Class sessions';
+  t.onclick = () => { showClasses = !showClasses; renderLegend(); render(); renderAgenda(); };
+  el.appendChild(t);
+}
+
+function render(){
+  const g = document.getElementById('grid'); g.innerHTML = '';
+  const y = view.getFullYear(), m = view.getMonth();
+  document.getElementById('monthLabel').textContent =
+    view.toLocaleDateString([], {month:'long', year:'numeric'});
+  const first = new Date(y, m, 1);
+  const start = new Date(first); start.setDate(1 - first.getDay());
+  const todayKey = dayKey(new Date());
+  const byDay = {};
+  for (const e of DATA.events){
+    if (!visible(e)) continue;
+    const d = evStart(e); if (!d) continue;
+    (byDay[dayKey(d)] ||= []).push(e);
+  }
+  for (let i = 0; i < 42; i++){
+    const d = new Date(start); d.setDate(start.getDate() + i);
+    const cell = document.createElement('div');
+    cell.className = 'day' + (d.getMonth() !== m ? ' other' : '') + (dayKey(d) === todayKey ? ' today' : '');
+    cell.innerHTML = `<div class="num">${d.getDate()}</div>`;
+    for (const e of (byDay[dayKey(d)] || [])){
+      const s = document.createElement('span');
+      s.className = 'ev ' + e.type;
+      s.style.borderLeftColor = color(e);
+      s.textContent = e.title;
+      s.onclick = () => showEvent(e);
+      cell.appendChild(s);
+    }
+    g.appendChild(cell);
+  }
+}
+
+function renderAgenda(){
+  const el = document.getElementById('agenda'); el.innerHTML = '';
+  const now = new Date(); now.setHours(0,0,0,0);
+  const horizon = new Date(now); horizon.setDate(now.getDate() + 14);
+  const groups = {};
+  for (const e of DATA.events){
+    if (!visible(e)) continue;
+    const d = evStart(e); if (!d || d < now || d >= horizon) continue;
+    (groups[dayKey(d)] ||= []).push(e);
+  }
+  const keys = Object.keys(groups).sort();
+  if (!keys.length){ el.innerHTML = '<div class="empty">Nothing due in the next two weeks. Nice.</div>'; return; }
+  for (const k of keys){
+    const d = new Date(k + 'T12:00:00');
+    const grp = document.createElement('div'); grp.className = 'daygroup';
+    const n = daysUntil(d);
+    const label = n === 0 ? 'Today' : n === 1 ? 'Tomorrow' : fmtDate(d);
+    grp.innerHTML = `<h3>${label}${n >= 0 && n <= 2 ? ' <span class="due-soon">(' + n + 'd)</span>' : ''}</h3>`;
+    for (const e of groups[k]){
+      const sd = evStart(e);
+      const item = document.createElement('div'); item.className = 'item';
+      item.innerHTML = `<div class="bar" style="background:${color(e)}"></div>
+        <div class="t">${fmtTime(sd) || 'All day'}</div>
+        <div class="b"><div class="title">${e.title}</div>
+        <div class="sub"><span class="badge">${e.type}</span>
+        <span class="badge">${e.source}</span>
+        ${e.course && DATA.courses[e.course] ? `<span class="badge">${DATA.courses[e.course].name}</span>` : ''}
+        </div></div>`;
+      item.onclick = () => showEvent(e);
+      item.style.cursor = 'pointer';
+      grp.appendChild(item);
+    }
+    el.appendChild(grp);
+  }
+}
+
+function showEvent(e){
+  const b = document.getElementById('dlgBody');
+  const d = evStart(e);
+  b.innerHTML = `<h3 style="margin-top:0">${e.title}</h3>
+    <p>${d ? fmtDate(d) + ' ' + fmtTime(d) : ''}</p>
+    ${e.location ? `<p>&#128205; ${e.location}</p>` : ''}
+    ${e.notes ? `<p>${e.notes}</p>` : ''}
+    ${e.url ? `<p><a href="${e.url}" target="_blank" style="color:#7dd3fc">Open in Canvas</a></p>` : ''}
+    <p style="color:var(--dim);font-size:12px">${e.type} &middot; ${e.source}</p>
+    <button onclick="document.getElementById('dlg').close()"
+      style="background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 14px;cursor:pointer">Close</button>`;
+  document.getElementById('dlg').showModal();
+}
+
+function shiftMonth(n){ view.setMonth(view.getMonth() + n); render(); }
+function goToday(){ view = new Date(); view.setDate(1); render(); }
+load();
+</script>
+</body>
+</html>

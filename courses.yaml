@@ -1,0 +1,33 @@
+# Your courses this semester. The dashboard colors events by course and uses
+# "keywords" to recognize Canvas feed entries (matched against the [TAG] suffix
+# in Canvas event titles and the course label). Adjust names/colors freely.
+
+cs1331:
+  name: "CS 1331"
+  color: "#f59e0b"
+  keywords: ["cs-1331", "cs 1331"]
+
+phys2211:
+  name: "PHYS 2211"
+  color: "#38bdf8"
+  keywords: ["phys-2211", "phys 2211"]
+
+phil3127:
+  name: "PHIL 3127"
+  color: "#a78bfa"
+  keywords: ["phil-3127", "phil 3127"]
+
+engl1102:
+  name: "ENGL 1102"
+  color: "#34d399"
+  keywords: ["engl-1102", "engl 1102"]
+
+gt1000:
+  name: "GT 1000"
+  color: "#fb7185"
+  keywords: ["gt-1000", "gt 1000"]
+
+career:
+  name: "Career / CoC"
+  color: "#8b93a5"
+  keywords: ["career"]

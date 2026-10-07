@@ -1,0 +1,39 @@
+# Events that don't come through the Canvas feed — exams announced only in the
+# syllabus, registrar dates, club stuff. Format:
+#
+# events:
+#   - title: "Midterm 1"
+#     date: 2026-10-15T19:00:00-04:00   # or just a date: 2026-10-15
+#     end: 2026-10-15T20:30:00-04:00    # optional
+#     course: cs1331                    # key from courses.yaml (optional)
+#     type: exam                        # assignment | exam | final | event
+#     location: "IC 103"                # optional
+#     notes: "Covers chapters 1-6"      # optional
+
+events:
+  # PHIL 3127 — from the syllabus lecture schedule (in-class quizzes).
+  - title: "PHIL 3127 Quiz 1"
+    date: 2026-09-17
+    course: phil3127
+    type: exam
+    notes: "In-class quiz (week of 9/15 lecture block)."
+  - title: "PHIL 3127 Quiz 2"
+    date: 2026-10-08
+    course: phil3127
+    type: exam
+    notes: "In-class quiz — syllabus lists it in the week-of-10/6 row; double-check whether it was 10/6 or 10/8."
+  - title: "PHIL 3127 Quiz 3"
+    date: 2026-10-27
+    course: phil3127
+    type: exam
+    notes: "In-class quiz."
+  - title: "PHIL 3127 Quiz 4"
+    date: 2026-11-17
+    course: phil3127
+    type: exam
+    notes: "In-class quiz."
+  - title: "PHIL 3127 Quiz 5 (Final, mandatory)"
+    date: 2026-12-10T18:00:00-05:00
+    course: phil3127
+    type: final
+    notes: "Final quiz — syllabus says attendance is mandatory. 6:00 PM."
