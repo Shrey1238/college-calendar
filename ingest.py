@@ -64,8 +64,14 @@ def canvas_events(courses: dict) -> list[dict]:
         print("CANVAS_ICS_URL not set; skipping Canvas")
         return []
     out = []
-    for url in urls:
-        cal = Calendar.from_ical(requests_get(url, binary=True))
+    for i, url in enumerate(urls):
+        try:
+            cal = Calendar.from_ical(requests_get(url, binary=True))
+        except Exception as e:
+            # Feed URLs contain a private token — never print them.
+            print(f"WARNING: feed #{i + 1} failed to fetch/parse: {e}")
+            continue
+        print(f"feed #{i + 1}: parsed {len(list(cal.walk('VEVENT')))} events")
         for ev in cal.walk("VEVENT"):
             raw = str(ev.get("SUMMARY", "(untitled)"))
             tag = TAG_RE.search(raw)
@@ -100,6 +106,9 @@ def canvas_events(courses: dict) -> list[dict]:
 def requests_get(url: str, binary: bool = False):
     import urllib.request
 
+    url = url.strip().strip("'\"")
+    if url and not url.startswith(("http://", "https://", "file://")):
+        url = "https://" + url
     with urllib.request.urlopen(url, timeout=30) as resp:
         data = resp.read()
     return data if binary else data.decode("utf-8", "replace")
