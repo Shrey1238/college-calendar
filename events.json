@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T20:11:45.381523+00:00",
+  "generated_at": "2026-10-07T20:18:28.273333+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -250,6 +250,17 @@
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_545460&month=09&year=2026#assignment_2636952",
       "location": null
+    },
+    {
+      "title": "CS 1331 Exam 1",
+      "start": "2026-09-23",
+      "end": null,
+      "course": "cs1331",
+      "type": "exam",
+      "source": "manual",
+      "url": null,
+      "location": null,
+      "notes": null
     },
     {
       "title": "06) Classes, Instances, Instance vs Static Methods, Visibility Modifiers (202608/CS/1331/FAB/94712)",
@@ -603,6 +614,17 @@
       "location": null
     },
     {
+      "title": "CS 1331 Exam 2",
+      "start": "2026-10-14",
+      "end": null,
+      "course": "cs1331",
+      "type": "exam",
+      "source": "manual",
+      "url": null,
+      "location": null,
+      "notes": null
+    },
+    {
       "title": "Academic Planning Project--Degree Plan",
       "start": "2026-10-14T13:30:00+00:00",
       "end": "2026-10-14T13:30:00+00:00",
@@ -884,6 +906,17 @@
       "location": null
     },
     {
+      "title": "Withdrawal Deadline",
+      "start": "2026-10-31",
+      "end": null,
+      "course": null,
+      "type": "event",
+      "source": "manual",
+      "url": null,
+      "location": null,
+      "notes": "Last day to withdraw from a course with a W."
+    },
+    {
       "title": "Project 3: Collaborative Podcast/Presentation",
       "start": "2026-11-01",
       "end": null,
@@ -1042,6 +1075,17 @@
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=11&year=2026#assignment_2583530",
       "location": null
+    },
+    {
+      "title": "CS 1331 Exam 3",
+      "start": "2026-11-16",
+      "end": null,
+      "course": "cs1331",
+      "type": "exam",
+      "source": "manual",
+      "url": null,
+      "location": null,
+      "notes": null
     },
     {
       "title": "PHYS 2211 section C lecture",
@@ -1324,6 +1368,28 @@
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=12&year=2026#assignment_2583422",
       "location": null
+    },
+    {
+      "title": "CS 1331 Final Exam (Section B)",
+      "start": "2026-12-11T11:20:00-05:00",
+      "end": "2026-12-11T14:10:00-05:00",
+      "course": "cs1331",
+      "type": "final",
+      "source": "manual",
+      "url": null,
+      "location": null,
+      "notes": "In-class, 11:20 AM - 2:10 PM. Check which section you're in \u2014 A/GR's final is Dec 16."
+    },
+    {
+      "title": "CS 1331 Final Exam (Section A/GR)",
+      "start": "2026-12-16T08:00:00-05:00",
+      "end": "2026-12-16T10:50:00-05:00",
+      "course": "cs1331",
+      "type": "final",
+      "source": "manual",
+      "url": null,
+      "location": null,
+      "notes": "In-class, 8:00 AM - 10:50 AM. Check which section you're in \u2014 B's final is Dec 11."
     },
     {
       "title": "Conflict Final",
