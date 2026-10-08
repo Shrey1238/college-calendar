@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T20:35:13.693240+00:00",
+  "generated_at": "2026-10-08T06:07:43.334671+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -564,6 +564,16 @@
       "location": null
     },
     {
+      "title": "8-9 October: Why Are We Reading Here (Mini-Photo Essay)",
+      "start": "2026-10-09",
+      "end": null,
+      "course": "engl1102",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_545460&month=10&year=2026#assignment_2647704",
+      "location": null
+    },
+    {
       "title": "HW W7",
       "start": "2026-10-09",
       "end": null,
@@ -642,6 +652,16 @@
       "type": "class",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#calendar_event_5216201",
+      "location": null
+    },
+    {
+      "title": "Homework 02",
+      "start": "2026-10-15T00:00:00+00:00",
+      "end": "2026-10-15T00:00:00+00:00",
+      "course": "cs1331",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=10&year=2026#assignment_2544266",
       "location": null
     },
     {
