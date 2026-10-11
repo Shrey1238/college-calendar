@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T12:53:14.166759+00:00",
+  "generated_at": "2026-10-11T21:59:38.920178+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -88,16 +88,6 @@
       "type": "assignment",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2602866",
-      "location": null
-    },
-    {
-      "title": "03) Iteration, Strings (202608/CS/1331/FAB/94712)",
-      "start": "2026-09-11T15:00:00+00:00",
-      "end": "2026-09-11T15:00:00+00:00",
-      "course": "cs1331",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=09&year=2026#assignment_2544220",
       "location": null
     },
     {
