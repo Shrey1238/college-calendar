@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T21:59:38.920178+00:00",
+  "generated_at": "2026-10-12T06:01:10.379694+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -50,46 +50,6 @@
     }
   },
   "events": [
-    {
-      "title": "HW W3",
-      "start": "2026-09-11",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2583464",
-      "location": null
-    },
-    {
-      "title": "Team Project--Contract",
-      "start": "2026-09-11",
-      "end": null,
-      "course": "gt1000",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=09&year=2026#assignment_2541336",
-      "location": null
-    },
-    {
-      "title": "Top 5 Strengths",
-      "start": "2026-09-11",
-      "end": null,
-      "course": "gt1000",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=09&year=2026#assignment_2541340",
-      "location": null
-    },
-    {
-      "title": "Week 4 Preview",
-      "start": "2026-09-11",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2602866",
-      "location": null
-    },
     {
       "title": "PHYS 2211 section C lecture",
       "start": "2026-09-14T16:30:00+00:00",
