@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T14:14:43.522506+00:00",
+  "generated_at": "2026-10-13T22:46:57.545604+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -853,6 +853,16 @@
       "type": "assignment",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583526",
+      "location": null
+    },
+    {
+      "title": "Paper 1: Release from Self-incurred Tutelage",
+      "start": "2026-10-30",
+      "end": null,
+      "course": "phil3127",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_539136&month=10&year=2026#assignment_2571396",
       "location": null
     },
     {
