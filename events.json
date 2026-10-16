@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T21:24:57.305543+00:00",
+  "generated_at": "2026-10-16T04:34:44.023886+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -50,16 +50,6 @@
     }
   },
   "events": [
-    {
-      "title": "Fall 2026 Jump Start Assignment",
-      "start": "2026-09-15",
-      "end": null,
-      "course": "career",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_445888&month=09&year=2026#assignment_2565604",
-      "location": null
-    },
     {
       "title": "04) Math, Random, Static Methods, Scanner, printf (202608/CS/1331/FAB/94712)",
       "start": "2026-09-16T15:00:00+00:00",
