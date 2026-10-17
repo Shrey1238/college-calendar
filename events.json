@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T21:11:39.000001+00:00",
+  "generated_at": "2026-10-17T04:29:56.356324+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -60,16 +60,6 @@
       "url": null,
       "location": null,
       "notes": "In-class quiz (week of 9/15 lecture block)."
-    },
-    {
-      "title": "Programming Exercise 02",
-      "start": "2026-09-17T00:00:00+00:00",
-      "end": "2026-09-17T00:00:00+00:00",
-      "course": "cs1331",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=09&year=2026#assignment_2544286",
-      "location": null
     },
     {
       "title": "GPS W4",
