@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T20:46:15.313958+00:00",
+  "generated_at": "2026-10-19T04:43:30.715135+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -60,46 +60,6 @@
       "url": null,
       "location": null,
       "notes": "In-class quiz (week of 9/15 lecture block)."
-    },
-    {
-      "title": "GPS W4",
-      "start": "2026-09-18",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2583438",
-      "location": null
-    },
-    {
-      "title": "HW W4",
-      "start": "2026-09-18",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2583466",
-      "location": null
-    },
-    {
-      "title": "Applying Your Strengths",
-      "start": "2026-09-18",
-      "end": null,
-      "course": "gt1000",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=09&year=2026#assignment_2541312",
-      "location": null
-    },
-    {
-      "title": "Week 5 Preview",
-      "start": "2026-09-18",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2602868",
-      "location": null
     },
     {
       "title": "05) Arrays (202608/CS/1331/FAB/94712)",
