@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T17:14:24.769393+00:00",
+  "generated_at": "2026-10-21T21:44:44.040306+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -60,16 +60,6 @@
       "url": null,
       "location": null,
       "notes": "In-class quiz (week of 9/15 lecture block)."
-    },
-    {
-      "title": "PHYS 2211 section C lecture",
-      "start": "2026-09-21T16:30:00+00:00",
-      "end": "2026-09-21T18:00:00+00:00",
-      "course": "phys2211",
-      "type": "class",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#calendar_event_5216187",
-      "location": null
     },
     {
       "title": "Project 2: Submit Draft for Peer-Review",
