@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T11:41:55.786647+00:00",
+  "generated_at": "2026-10-23T17:10:18.118837+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -81,16 +81,6 @@
       "url": null,
       "location": null,
       "notes": null
-    },
-    {
-      "title": "06) Classes, Instances, Instance vs Static Methods, Visibility Modifiers (202608/CS/1331/FAB/94712)",
-      "start": "2026-09-23T15:00:00+00:00",
-      "end": "2026-09-23T15:00:00+00:00",
-      "course": "cs1331",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=09&year=2026#assignment_2544228",
-      "location": null
     },
     {
       "title": "PHYS 2211 section C lecture",
