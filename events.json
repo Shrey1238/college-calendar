@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T11:33:32.013431+00:00",
+  "generated_at": "2026-10-25T16:23:56.024998+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -120,16 +120,6 @@
       "type": "assignment",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2602870",
-      "location": null
-    },
-    {
-      "title": "In Pursuit of Happiness--Resource Scavenger Hunt",
-      "start": "2026-09-25T15:59:00+00:00",
-      "end": "2026-09-25T15:59:00+00:00",
-      "course": "gt1000",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=09&year=2026#assignment_2605764",
       "location": null
     },
     {
