@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T20:53:13.139374+00:00",
+  "generated_at": "2026-10-26T04:50:01.844121+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -71,56 +71,6 @@
       "url": null,
       "location": null,
       "notes": null
-    },
-    {
-      "title": "GPS W5",
-      "start": "2026-09-25",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2583440",
-      "location": null
-    },
-    {
-      "title": "HW W5",
-      "start": "2026-09-25",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2583468",
-      "location": null
-    },
-    {
-      "title": "Lab 1 - Submission & Peer Evals",
-      "start": "2026-09-25",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2583482",
-      "location": null
-    },
-    {
-      "title": "Project 2: Submit Peer-Review Materials",
-      "start": "2026-09-25",
-      "end": null,
-      "course": "engl1102",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_545460&month=09&year=2026#assignment_2639898",
-      "location": null
-    },
-    {
-      "title": "Week 6 Preview",
-      "start": "2026-09-25",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2602870",
-      "location": null
     },
     {
       "title": "Project 2: Text-Based Argumentative Essay",
