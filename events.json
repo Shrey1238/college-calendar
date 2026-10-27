@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T18:05:38.064013+00:00",
+  "generated_at": "2026-10-27T22:15:53.347914+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -633,6 +633,16 @@
       "type": "assignment",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=10&year=2026#assignment_2544270",
+      "location": null
+    },
+    {
+      "title": "Podcast Submissions for October 29 Presenters",
+      "start": "2026-10-29T18:00:00+00:00",
+      "end": "2026-10-29T18:00:00+00:00",
+      "course": "engl1102",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_545460&month=10&year=2026#assignment_2662342",
       "location": null
     },
     {
