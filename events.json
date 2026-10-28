@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T22:15:53.347914+00:00",
+  "generated_at": "2026-10-28T05:44:58.144344+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -71,16 +71,6 @@
       "url": null,
       "location": null,
       "notes": null
-    },
-    {
-      "title": "Project 2: Text-Based Argumentative Essay",
-      "start": "2026-09-27",
-      "end": null,
-      "course": "engl1102",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_545460&month=09&year=2026#assignment_2631656",
-      "location": null
     },
     {
       "title": "Review for Test 1",
