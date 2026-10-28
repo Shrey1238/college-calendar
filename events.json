@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T12:57:57.611249+00:00",
+  "generated_at": "2026-10-28T22:37:13.623216+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -110,16 +110,6 @@
       "type": "assignment",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2583450",
-      "location": null
-    },
-    {
-      "title": "PHYS 2211 section C lecture",
-      "start": "2026-09-28T16:30:00+00:00",
-      "end": "2026-09-28T18:00:00+00:00",
-      "course": "phys2211",
-      "type": "class",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#calendar_event_5216191",
       "location": null
     },
     {
@@ -646,6 +636,16 @@
       "location": null
     },
     {
+      "title": "HW W10",
+      "start": "2026-10-30",
+      "end": null,
+      "course": "phys2211",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583452",
+      "location": null
+    },
+    {
       "title": "Lab 3 - Peer Points",
       "start": "2026-10-30",
       "end": null,
@@ -747,6 +747,16 @@
       "location": null
     },
     {
+      "title": "HW W11",
+      "start": "2026-11-06",
+      "end": null,
+      "course": "phys2211",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=11&year=2026#assignment_2583454",
+      "location": null
+    },
+    {
       "title": "Lab 4 - Submission & Peer Evals",
       "start": "2026-11-06",
       "end": null,
@@ -837,6 +847,16 @@
       "location": null
     },
     {
+      "title": "HW W12",
+      "start": "2026-11-13",
+      "end": null,
+      "course": "phys2211",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=11&year=2026#assignment_2583456",
+      "location": null
+    },
+    {
       "title": "Lab 4 - Peer Points",
       "start": "2026-11-13",
       "end": null,
@@ -909,6 +929,16 @@
       "location": null
     },
     {
+      "title": "HW W13",
+      "start": "2026-11-20",
+      "end": null,
+      "course": "phys2211",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=11&year=2026#assignment_2583458",
+      "location": null
+    },
+    {
       "title": "Lab 5 - Submission & Peer Evals",
       "start": "2026-11-20",
       "end": null,
@@ -946,6 +976,16 @@
       "type": "assignment",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=11&year=2026#assignment_2544222",
+      "location": null
+    },
+    {
+      "title": "Review for Test 3",
+      "start": "2026-11-23",
+      "end": null,
+      "course": "phys2211",
+      "type": "exam",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=11&year=2026#assignment_2583510",
       "location": null
     },
     {
@@ -1006,6 +1046,16 @@
       "type": "assignment",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=11&year=2026#assignment_2541318",
+      "location": null
+    },
+    {
+      "title": "HW W14",
+      "start": "2026-11-27",
+      "end": null,
+      "course": "phys2211",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=11&year=2026#assignment_2583460",
       "location": null
     },
     {
@@ -1116,6 +1166,16 @@
       "type": "exam",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=12&year=2026#assignment_2584148",
+      "location": null
+    },
+    {
+      "title": "Review for Final Exam",
+      "start": "2026-12-08",
+      "end": null,
+      "course": "phys2211",
+      "type": "final",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=12&year=2026#assignment_2583504",
       "location": null
     },
     {
