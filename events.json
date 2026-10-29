@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T22:37:13.623216+00:00",
+  "generated_at": "2026-10-29T05:50:51.595785+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -71,46 +71,6 @@
       "url": null,
       "location": null,
       "notes": null
-    },
-    {
-      "title": "Review for Test 1",
-      "start": "2026-09-28",
-      "end": null,
-      "course": "phys2211",
-      "type": "exam",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2583506",
-      "location": null
-    },
-    {
-      "title": "Secret T1EC",
-      "start": "2026-09-28",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2583512",
-      "location": null
-    },
-    {
-      "title": "Test 1",
-      "start": "2026-09-28",
-      "end": null,
-      "course": "phys2211",
-      "type": "exam",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2583514",
-      "location": null
-    },
-    {
-      "title": "Gradescope Practice",
-      "start": "2026-09-28",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=09&year=2026#assignment_2583450",
-      "location": null
     },
     {
       "title": "07) Constructors (202608/CS/1331/FAB/94712)",
