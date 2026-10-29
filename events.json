@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T05:50:51.595785+00:00",
+  "generated_at": "2026-10-29T13:05:12.831091+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -694,6 +694,16 @@
       "type": "class",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=11&year=2026#calendar_event_5216213",
+      "location": null
+    },
+    {
+      "title": "Homework 05",
+      "start": "2026-11-05T01:00:00+00:00",
+      "end": "2026-11-05T01:00:00+00:00",
+      "course": "cs1331",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=11&year=2026#assignment_2544272",
       "location": null
     },
     {
