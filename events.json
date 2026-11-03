@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T14:18:49.726782+00:00",
+  "generated_at": "2026-11-03T23:24:56.290851+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -674,6 +674,16 @@
       "type": "assignment",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=11&year=2026#assignment_2583528",
+      "location": null
+    },
+    {
+      "title": "Project 3: Self-Evaluation",
+      "start": "2026-11-08",
+      "end": null,
+      "course": "engl1102",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_545460&month=11&year=2026#assignment_2668056",
       "location": null
     },
     {
