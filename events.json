@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T13:04:56.042539+00:00",
+  "generated_at": "2026-11-07T21:52:59.202555+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -82,16 +82,6 @@
       "url": null,
       "location": null,
       "notes": "In-class quiz \u2014 syllabus lists it in the week-of-10/6 row; double-check whether it was 10/6 or 10/8."
-    },
-    {
-      "title": "Team Project Reflection",
-      "start": "2026-10-08T13:30:00+00:00",
-      "end": "2026-10-08T13:30:00+00:00",
-      "course": "gt1000",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=10&year=2026#assignment_2541334",
-      "location": null
     },
     {
       "title": "8-9 October: Why Are We Reading Here (Mini-Photo Essay)",
