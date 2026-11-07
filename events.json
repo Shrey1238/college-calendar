@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T19:26:01.307972+00:00",
+  "generated_at": "2026-11-07T06:00:15.377925+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -82,16 +82,6 @@
       "url": null,
       "location": null,
       "notes": "In-class quiz \u2014 syllabus lists it in the week-of-10/6 row; double-check whether it was 10/6 or 10/8."
-    },
-    {
-      "title": "Homework 01",
-      "start": "2026-10-08T00:00:00+00:00",
-      "end": "2026-10-08T00:00:00+00:00",
-      "course": "cs1331",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=10&year=2026#assignment_2544264",
-      "location": null
     },
     {
       "title": "Team Project Reflection",
