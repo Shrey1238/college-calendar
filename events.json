@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T22:07:55.324035+00:00",
+  "generated_at": "2026-11-09T06:34:29.389863+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -82,46 +82,6 @@
       "url": null,
       "location": null,
       "notes": "In-class quiz \u2014 syllabus lists it in the week-of-10/6 row; double-check whether it was 10/6 or 10/8."
-    },
-    {
-      "title": "8-9 October: Why Are We Reading Here (Mini-Photo Essay)",
-      "start": "2026-10-09",
-      "end": null,
-      "course": "engl1102",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_545460&month=10&year=2026#assignment_2647704",
-      "location": null
-    },
-    {
-      "title": "HW W7",
-      "start": "2026-10-09",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583472",
-      "location": null
-    },
-    {
-      "title": "Lab 2 - Submission & Peer Evals",
-      "start": "2026-10-09",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583486",
-      "location": null
-    },
-    {
-      "title": "Week 8 Preview",
-      "start": "2026-10-09",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583546",
-      "location": null
     },
     {
       "title": "PHYS 2211 section C lecture",
