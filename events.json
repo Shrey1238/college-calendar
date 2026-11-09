@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T06:34:29.389863+00:00",
+  "generated_at": "2026-11-09T22:24:09.925661+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -537,16 +537,6 @@
       "location": null
     },
     {
-      "title": "HW W11",
-      "start": "2026-11-06",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=11&year=2026#assignment_2583454",
-      "location": null
-    },
-    {
       "title": "Lab 4 - Submission & Peer Evals",
       "start": "2026-11-06",
       "end": null,
@@ -654,6 +644,16 @@
       "type": "final",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=11&year=2026#assignment_2541326",
+      "location": null
+    },
+    {
+      "title": "HW W11",
+      "start": "2026-11-13",
+      "end": null,
+      "course": "phys2211",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=11&year=2026#assignment_2583454",
       "location": null
     },
     {
@@ -936,6 +936,16 @@
       "type": "assignment",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=12&year=2026#assignment_2583434",
+      "location": null
+    },
+    {
+      "title": "Project 4: Essay or Creative Artifact",
+      "start": "2026-12-04",
+      "end": null,
+      "course": "engl1102",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_545460&month=12&year=2026#assignment_2671838",
       "location": null
     },
     {
