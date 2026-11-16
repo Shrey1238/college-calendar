@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T18:52:35.923338+00:00",
+  "generated_at": "2026-11-16T06:32:54.329468+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -93,56 +93,6 @@
       "url": null,
       "location": null,
       "notes": null
-    },
-    {
-      "title": "GPS W8",
-      "start": "2026-10-16",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583446",
-      "location": null
-    },
-    {
-      "title": "HW W8",
-      "start": "2026-10-16",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583474",
-      "location": null
-    },
-    {
-      "title": "Lab 2 - Peer Points",
-      "start": "2026-10-16",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583484",
-      "location": null
-    },
-    {
-      "title": "Week 9 Preview",
-      "start": "2026-10-16",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583548",
-      "location": null
-    },
-    {
-      "title": "Academic Planning Project--Reflection Sheet",
-      "start": "2026-10-16",
-      "end": null,
-      "course": "gt1000",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=10&year=2026#assignment_2541316",
-      "location": null
     },
     {
       "title": "10) Object, Abstract Classes (202608/CS/1331/FAB/94712)",
