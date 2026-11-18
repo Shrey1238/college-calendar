@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T07:31:08.895793+00:00",
+  "generated_at": "2026-11-18T20:34:03.163745+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -93,26 +93,6 @@
       "url": null,
       "location": null,
       "notes": null
-    },
-    {
-      "title": "10) Object, Abstract Classes (202608/CS/1331/FAB/94712)",
-      "start": "2026-10-19T15:00:00+00:00",
-      "end": "2026-10-19T15:00:00+00:00",
-      "course": "cs1331",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=10&year=2026#assignment_2544244",
-      "location": null
-    },
-    {
-      "title": "PHYS 2211 section C lecture",
-      "start": "2026-10-19T16:30:00+00:00",
-      "end": "2026-10-19T18:00:00+00:00",
-      "course": "phys2211",
-      "type": "class",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#calendar_event_5216203",
-      "location": null
     },
     {
       "title": "Guest Speakers - Experiential Learning",
@@ -759,26 +739,6 @@
       "location": null
     },
     {
-      "title": "Constellation of Support",
-      "start": "2026-11-25",
-      "end": null,
-      "course": "gt1000",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=11&year=2026#assignment_2541328",
-      "location": null
-    },
-    {
-      "title": "Final Reflection on the Semester",
-      "start": "2026-11-25T14:30:00+00:00",
-      "end": "2026-11-25T14:30:00+00:00",
-      "course": "gt1000",
-      "type": "final",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=11&year=2026#assignment_2541310",
-      "location": null
-    },
-    {
       "title": "PHYS 2211 section C lecture",
       "start": "2026-11-25T17:30:00+00:00",
       "end": "2026-11-25T19:00:00+00:00",
@@ -836,6 +796,26 @@
       "type": "class",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=11&year=2026#calendar_event_5216227",
+      "location": null
+    },
+    {
+      "title": "Constellation of Support",
+      "start": "2026-12-02",
+      "end": null,
+      "course": "gt1000",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=12&year=2026#assignment_2541328",
+      "location": null
+    },
+    {
+      "title": "Final Reflection on the Semester",
+      "start": "2026-12-02T14:30:00+00:00",
+      "end": "2026-12-02T14:30:00+00:00",
+      "course": "gt1000",
+      "type": "final",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=12&year=2026#assignment_2541310",
       "location": null
     },
     {
