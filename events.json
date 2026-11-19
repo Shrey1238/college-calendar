@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T20:34:03.163745+00:00",
+  "generated_at": "2026-11-19T07:29:18.757817+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -836,6 +836,26 @@
       "type": "class",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=12&year=2026#calendar_event_5216229",
+      "location": null
+    },
+    {
+      "title": "Homework 08",
+      "start": "2026-12-03T01:00:00+00:00",
+      "end": "2026-12-03T01:00:00+00:00",
+      "course": "cs1331",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=12&year=2026#assignment_2544278",
+      "location": null
+    },
+    {
+      "title": "Programming Exercise 06",
+      "start": "2026-12-03T01:00:00+00:00",
+      "end": "2026-12-03T01:00:00+00:00",
+      "course": "cs1331",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=12&year=2026#assignment_2544294",
       "location": null
     },
     {
