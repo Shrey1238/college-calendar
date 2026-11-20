@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T20:39:28.426789+00:00",
+  "generated_at": "2026-11-20T07:19:09.198863+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -819,16 +819,6 @@
       "location": null
     },
     {
-      "title": "Spring Fundamentals & MVC (202608/CS/1331/FAB/94712)",
-      "start": "2026-12-02T16:00:00+00:00",
-      "end": "2026-12-02T16:00:00+00:00",
-      "course": "cs1331",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=12&year=2026#assignment_2544246",
-      "location": null
-    },
-    {
       "title": "PHYS 2211 section C lecture",
       "start": "2026-12-02T17:30:00+00:00",
       "end": "2026-12-02T19:00:00+00:00",
@@ -879,9 +869,19 @@
       "location": null
     },
     {
-      "title": "Spring Boot Essentials: JPA, DI, MVC, & REST API (202608/CS/1331/FAB/94712)",
+      "title": "Spring Fundamentals & MVC (202608/CS/1331/FAB/94712)",
       "start": "2026-12-04T16:00:00+00:00",
       "end": "2026-12-04T16:00:00+00:00",
+      "course": "cs1331",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=12&year=2026#assignment_2544246",
+      "location": null
+    },
+    {
+      "title": "Spring Boot Essentials: JPA, DI, MVC, & REST API (202608/CS/1331/FAB/94712)",
+      "start": "2026-12-07T16:00:00+00:00",
+      "end": "2026-12-07T16:00:00+00:00",
       "course": "cs1331",
       "type": "assignment",
       "source": "canvas",
