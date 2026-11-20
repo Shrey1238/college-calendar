@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T07:19:09.198863+00:00",
+  "generated_at": "2026-11-20T20:23:51.014775+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -93,36 +93,6 @@
       "url": null,
       "location": null,
       "notes": null
-    },
-    {
-      "title": "Guest Speakers - Experiential Learning",
-      "start": "2026-10-21T13:30:00+00:00",
-      "end": "2026-10-21T14:00:00+00:00",
-      "course": "gt1000",
-      "type": "class",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=10&year=2026#calendar_event_5321905",
-      "location": "Van Leer 306"
-    },
-    {
-      "title": "11) Polymorphism (202608/CS/1331/FAB/94712)",
-      "start": "2026-10-21T15:00:00+00:00",
-      "end": "2026-10-21T15:00:00+00:00",
-      "course": "cs1331",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=10&year=2026#assignment_2544234",
-      "location": null
-    },
-    {
-      "title": "PHYS 2211 section C lecture",
-      "start": "2026-10-21T16:30:00+00:00",
-      "end": "2026-10-21T18:00:00+00:00",
-      "course": "phys2211",
-      "type": "class",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#calendar_event_5216205",
-      "location": null
     },
     {
       "title": "Homework 03",
@@ -999,6 +969,16 @@
       "type": "final",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=12&year=2026#assignment_2583418",
+      "location": null
+    },
+    {
+      "title": "Fall 2026 Mandatory Second-Year Advising Quiz",
+      "start": "2026-12-31",
+      "end": null,
+      "course": null,
+      "type": "exam",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_39105&month=12&year=2026#assignment_2682846",
       "location": null
     }
   ]
