@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T20:23:51.014775+00:00",
+  "generated_at": "2026-11-21T07:11:56.844277+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -93,16 +93,6 @@
       "url": null,
       "location": null,
       "notes": null
-    },
-    {
-      "title": "Homework 03",
-      "start": "2026-10-22T00:00:00+00:00",
-      "end": "2026-10-22T00:00:00+00:00",
-      "course": "cs1331",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_530698&month=10&year=2026#assignment_2544268",
-      "location": null
     },
     {
       "title": "GPS W9",
@@ -826,6 +816,16 @@
       "type": "assignment",
       "source": "canvas",
       "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=12&year=2026#assignment_2583434",
+      "location": null
+    },
+    {
+      "title": "Paper 2: Testing Plato & Kant: Are We in a Cave of Self-incurred Tutelage?",
+      "start": "2026-12-04",
+      "end": null,
+      "course": "phil3127",
+      "type": "assignment",
+      "source": "canvas",
+      "url": "https://gatech.instructure.com/calendar?include_contexts=course_539136&month=12&year=2026#assignment_2571398",
       "location": null
     },
     {
