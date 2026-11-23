@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T19:43:13.278044+00:00",
+  "generated_at": "2026-11-23T07:41:59.468813+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -93,76 +93,6 @@
       "url": null,
       "location": null,
       "notes": null
-    },
-    {
-      "title": "GPS W9",
-      "start": "2026-10-23",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583448",
-      "location": null
-    },
-    {
-      "title": "HW W9",
-      "start": "2026-10-23",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583476",
-      "location": null
-    },
-    {
-      "title": "Lab 3 - Submission & Peer Evals",
-      "start": "2026-10-23",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583490",
-      "location": null
-    },
-    {
-      "title": "Midterm Survey",
-      "start": "2026-10-23",
-      "end": null,
-      "course": "phys2211",
-      "type": "exam",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583388",
-      "location": null
-    },
-    {
-      "title": "Test 1 Wrapper",
-      "start": "2026-10-23",
-      "end": null,
-      "course": "phys2211",
-      "type": "exam",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583352",
-      "location": null
-    },
-    {
-      "title": "Experiential Learning Opportunities",
-      "start": "2026-10-23",
-      "end": null,
-      "course": "gt1000",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_548090&month=10&year=2026#assignment_2541304",
-      "location": null
-    },
-    {
-      "title": "Week 10 Preview",
-      "start": "2026-10-23",
-      "end": null,
-      "course": "phys2211",
-      "type": "assignment",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2602958",
-      "location": null
     },
     {
       "title": "Review for Test 2",
