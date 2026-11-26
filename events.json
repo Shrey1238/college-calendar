@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T21:43:37.903392+00:00",
+  "generated_at": "2026-11-26T08:22:20.456185+00:00",
   "courses": {
     "cs1331": {
       "name": "CS 1331",
@@ -93,26 +93,6 @@
       "url": null,
       "location": null,
       "notes": null
-    },
-    {
-      "title": "Review for Test 2",
-      "start": "2026-10-26",
-      "end": null,
-      "course": "phys2211",
-      "type": "exam",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583508",
-      "location": null
-    },
-    {
-      "title": "Test 2",
-      "start": "2026-10-26",
-      "end": null,
-      "course": "phys2211",
-      "type": "exam",
-      "source": "canvas",
-      "url": "https://gatech.instructure.com/calendar?include_contexts=course_534420&month=10&year=2026#assignment_2583518",
-      "location": null
     },
     {
       "title": "PHIL 3127 Quiz 3",
